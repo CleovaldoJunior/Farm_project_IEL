@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(blank=True, max_length=255, null=True, verbose_name='Name')),
-                ('geometry', django.contrib.gis.db.models.fields.GeometryField(blank=True, null=True, srid=4326, verbose_name='Geometry')),
+                ('geometry', django.contrib.gis.db.models.fields.GeometryField(blank=False, null=True, srid=4326, verbose_name='Geometry')),
                 ('area', models.FloatField(blank=True, null=True, verbose_name='Area')),
                 ('centroid', django.contrib.gis.db.models.fields.PointField(blank=True, null=True, srid=4326, verbose_name='Centroid')),
                 ('creation_date', models.DateTimeField(auto_now_add=True, verbose_name='Creation date')),

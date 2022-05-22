@@ -16,11 +16,13 @@ class OwnerAdmin(admin.ModelAdmin):
 
 
 class FarmAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name',
+    #Included the display of municipality, owner and State on the Admin's Page.
+    list_display = ['id', 'name', 'municipality', 'owner', 'state',
                     'creation_date', 'last_modification_date',
                     'is_active']
     list_filter = ['creation_date', 'last_modification_date', 'is_active']
-    search_fields = ['name', '=id']
+    #Included the municipality, state and owner in the Admin's filters.
+    search_fields = ['name', '=id', 'municipality', 'state', 'owner']
 
     readonly_fields = ["centroid", "area"]
 
